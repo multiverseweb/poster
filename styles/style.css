@@ -27,6 +27,7 @@ a {
 }
 
 .print{
+    font-size: smaller;
     position: absolute;
     bottom: 10px;
     color:white;
