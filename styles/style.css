@@ -1,28 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: black;
     overflow: hidden;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 20;
-    top:45vh;
-    left:50vw;
-    transform: translate(-50%,-50%);
+    top: 45vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
     animation: fadeIn3 1s forwards;
     opacity: 0;
     animation-delay: 1s;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-.container a{
+
+.print{
+    position: absolute;
+    bottom: 10px;
+    color:white;
+    left: 50vw;
+    transform: translate(-50%);
+    animation: fadeIn2 1s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.container a {
     width: 70vw;
     background-color: rgba(181, 181, 181, 0.292);
     padding: 20px;
@@ -33,8 +48,9 @@ a{
     backdrop-filter: blur(7px);
     box-shadow: 0 0 10px black, 0 0 10px black;
 }
-.heading{
-    color:white;
+
+.heading {
+    color: white;
     width: 70vw;
     margin: 10px;
     padding: 20px;
@@ -43,46 +59,53 @@ a{
     font-weight: 700;
     text-shadow: 5px 5px 5px black;
 }
-.logo{
+
+.logo {
     position: absolute;
     max-width: 400px;
     width: 80vw;
-    top:45vh;
-    left:50vw;
-    transform: translate(-50%,-50%);
+    top: 45vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
     animation: fadeIn 1s;
     opacity: 0;
 }
-@keyframes fadeIn{
-    0%{
+
+@keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
 
-@keyframes fadeIn2{
-    0%{
+@keyframes fadeIn2 {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 0.6;
     }
 }
-@keyframes fadeIn3{
-    0%{
+
+@keyframes fadeIn3 {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-.horse{
+.horse {
     min-height: 100vh;
     width: 100vw;
     object-fit: cover;
@@ -92,25 +115,29 @@ a{
     animation-delay: 1s;
     filter: saturate(0.4);
 }
-.poster{
+
+.poster {
     position: absolute;
     max-height: 90vh;
     max-width: 90vw;
-    top:-100vh;
-    left:50vw;
-    transform: translate(-50%,-50%);
+    top: -100vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
     animation: drop 2s ease-in forwards;
     box-shadow: 0 0 30px black, 0 0 30px black;
 }
-@keyframes drop{
-    0%{
+
+@keyframes drop {
+    0% {
         top: -100vh;
     }
-    100%{
+
+    100% {
         top: 45vh;
     }
 }
-#playButton{
+
+#playButton {
     position: absolute;
     z-index: 10;
     bottom: 10px;
@@ -121,10 +148,12 @@ a{
     opacity: 0;
     animation-delay: 1s;
 }
-#sound{
+
+#sound {
     height: 25px;
 }
-.back{
+
+.back {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -132,11 +161,13 @@ a{
     opacity: 0;
     animation-delay: 1s;
 }
-.backImg{
+
+.backImg {
     height: 35px;
 }
-@media screen and (min-width: 600px){
-    .horse{
+
+@media screen and (min-width: 600px) {
+    .horse {
         object-position: 0vw;
     }
 }
