@@ -90,6 +90,7 @@ a{
     animation: fadeIn2 1s forwards;
     opacity: 0;
     animation-delay: 1s;
+    filter: saturate(0.4);
 }
 .poster{
     position: absolute;
@@ -99,7 +100,7 @@ a{
     left:50vw;
     transform: translate(-50%,-50%);
     animation: drop 2s ease-in forwards;
-    box-shadow: 0 0 20px black, 0 0 20px black;
+    box-shadow: 0 0 30px black, 0 0 30px black;
 }
 @keyframes drop{
     0%{
