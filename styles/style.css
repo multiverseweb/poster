@@ -6,11 +6,48 @@ body{
     background-color: black;
     overflow: hidden;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 20;
+    top:45vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    animation: fadeIn3 3s forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container a{
+    width: 70vw;
+    background-color: rgba(181, 181, 181, 0.292);
+    padding: 20px;
+    font-size: 17px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 10px black, 0 0 10px black;
+}
+.heading{
+    color:white;
+    width: 70vw;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px black;
+}
 .logo{
     position: absolute;
     max-width: 400px;
     width: 80vw;
-    top:50vh;
+    top:45vh;
     left:50vw;
     transform: translate(-50%,-50%);
     animation: fadeIn 3s;
@@ -36,6 +73,15 @@ body{
         opacity: 0.6;
     }
 }
+@keyframes fadeIn3{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .horse{
     min-height: 100vh;
     width: 100vw;
@@ -61,7 +107,7 @@ body{
         top: -100vh;
     }
     100%{
-        top: 50vh;
+        top: 45vh;
     }
 }
 #playButton{
@@ -77,6 +123,17 @@ body{
 }
 #sound{
     height: 25px;
+}
+.back{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    animation: fadeIn2 3s forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+.backImg{
+    height: 35px;
 }
 @media screen and (min-width: 600px){
     .horse{
