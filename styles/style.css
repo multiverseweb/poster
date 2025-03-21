@@ -14,9 +14,9 @@ body{
     top:45vh;
     left:50vw;
     transform: translate(-50%,-50%);
-    animation: fadeIn3 3s forwards;
+    animation: fadeIn3 1s forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 a{
     text-decoration: none;
@@ -50,7 +50,7 @@ a{
     top:45vh;
     left:50vw;
     transform: translate(-50%,-50%);
-    animation: fadeIn 3s;
+    animation: fadeIn 1s;
     opacity: 0;
 }
 @keyframes fadeIn{
@@ -87,9 +87,9 @@ a{
     width: 100vw;
     object-fit: cover;
     object-position: -30vw;
-    animation: fadeIn2 3s forwards;
+    animation: fadeIn2 1s forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .poster{
     position: absolute;
@@ -98,8 +98,7 @@ a{
     top:-100vh;
     left:50vw;
     transform: translate(-50%,-50%);
-    animation: drop 3s ease-in forwards;
-    animation-delay: 1s;
+    animation: drop 2s ease-in forwards;
     box-shadow: 0 0 20px black, 0 0 20px black;
 }
 @keyframes drop{
@@ -117,9 +116,9 @@ a{
     right: 10px;
     background-color: transparent;
     border: none;
-    animation: fadeIn2 3s forwards;
+    animation: fadeIn2 1s forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 #sound{
     height: 25px;
@@ -128,9 +127,9 @@ a{
     position: absolute;
     bottom: 10px;
     left: 10px;
-    animation: fadeIn2 3s forwards;
+    animation: fadeIn2 1s forwards;
     opacity: 0;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .backImg{
     height: 35px;
