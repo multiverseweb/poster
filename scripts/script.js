@@ -5,10 +5,10 @@ const buttonImg = document.getElementById('sound');
 playButton.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        buttonImg.src = "../images/mute.png";
+        buttonImg.src = "../images/volume.png";
     } else {
         audio.pause();
-        buttonImg.src = "../images/volume.png";
+        buttonImg.src = "../images/mute.png";
     }
 });
 audio.addEventListener('ended', () => {
