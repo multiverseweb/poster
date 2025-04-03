@@ -1,4 +1,4 @@
-const audio = document.getElementById('audio');
+/*const audio = document.getElementById('audio');
 const playButton = document.getElementById('playButton');
 const buttonImg = document.getElementById('sound');
 
@@ -21,3 +21,11 @@ document.addEventListener('contextmenu', event => {
       event.preventDefault();
     }
   });
+*/
+
+  fetch('requirements.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('requirements-container').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading requirements.html:', error));
