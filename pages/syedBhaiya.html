@@ -53,7 +53,7 @@
         }
 
         .check {
-            margin: 5px;
+            margin: 7px;
         }
 
         .box {
@@ -133,14 +133,75 @@
 </head>
 
 <body>
-    <img src="../images/malang.png" alt="" class="logo">
-    <img src="../images/horse.gif" alt="" class="horse">
-    <img src="../images/syed_bhaiya.jpg" alt="" class="poster">
-    <p class="print">* Print on demand basis</p>
-    <button id="playButton"><img src="../images/mute.png" alt="" id="sound"></button>
-    <audio id="audio" src="../resources/cowboy.mp3"></audio>
-    <a href="../index.html" class="back"><img src="../images/back.png" alt="" class="backImg"></a>
-    <script src="../scripts/script.js"></script>
+    <img src="../images/cowboy.jpg" class="cowboy" alt="">
+    <div class="box">
+        <h2 id="heading">Farewell Preparation Checklist</h2>
+        <div class="container" id="container">
+            <label><input type="checkbox" class="check"> Extra pair of clothes
+            </label><br>
+            <label><input type="checkbox" class="check"> Towel
+            </label><br>
+            <label><input type="checkbox" class="check"> Your daily necessities</label><br>
+            <label><input type="checkbox" class="check"> Extra प्यार for juniors
+            </label><br>
+            <label><input type="checkbox" class="check"> One bottle of water</label><br>
+            <label><input type="checkbox" class="check"> Required electronics
+            </label><br>
+            <label><input type="checkbox" class="check"> Ticket
+            </label><br>
+            <p id="text">*Aur baki cheeze aapko pata hee h</p>
+        </div>
+        <br><br>
+        <button id="goButton" disabled>Let's Go</button>
+
+        <p id="message"><SPAN id="farewell">You're all set for the farewell! 🎉🎊</SPAN></p>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.check');
+        const button = document.getElementById('goButton');
+        const message = document.getElementById('message');
+        const container = document.getElementById('container');
+        const heading = document.getElementById('heading');
+
+        function updateButtonState() {
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            button.disabled = !allChecked;
+            button.style.opacity = allChecked ? "1" : "0.5";
+            button.style.boxShadow = allChecked ? "0 0 10px black, 0 0 10px black" : "none";
+            button.style.cursor = allChecked ? "pointer" : "not-allowed";
+        }
+
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateButtonState);
+        });
+
+        button.addEventListener('click', () => {
+            message.style.display = 'block';
+            container.style.display = 'none';
+            button.style.display = 'none';
+            heading.style.display = 'none';
+        });
+
+        const celebrateBtn = document.getElementById('goButton');
+
+        celebrateBtn.addEventListener('click', () => {
+            // trigger confetti
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // button animation
+            celebrateBtn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                celebrateBtn.style.transform = 'scale(1)';
+            }, 100);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 
 </html>
